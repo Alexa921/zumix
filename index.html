@@ -13,9 +13,9 @@
             <a href="/index.html"><h1 class="logo">ZUMIX</h1></a>
         </div>
         <ul class="nav-center">
-            <li><a href="/programa.html">Shop</a></li>
-            <li><a href="/contacto.html">About</a></li>
-            <li><a href="/tienda.html">Theme Features</a></li>
+            <li><a href="/">Shop</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/theme.html">Theme Features</a></li>
         </ul>
         <div class="nav-right">
             <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram" class="icon"></a>
@@ -526,7 +526,7 @@
 
             thumbnails.forEach(thumb => {
             thumb.addEventListener("click", () => {
-                mainImage.src = thumb.src; // cambia la imagen principal al hacer clic
+                mainImage.src = thumb.src; 
                 mainImage.alt = thumb.alt;
             });
             });
