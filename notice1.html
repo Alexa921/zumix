@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/notice1.css">
+    <title>Zumix</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/index.html"><h1 class="logo">ZUMIX</h1></a>
+        </div>
+        <ul class="nav-center">
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/theme.html">Theme Features</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram" class="icon"></a>
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook" class="icon"></a>
+            <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="Twitter" class="icon"></a>
+            <a href="/carrito.html"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Carrito" class="icon"></a>
+            <span id="contador">0</span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-content">
+        </div>
+    </header>
+
+    <!-- SECTION 1 -->
+    <section class="blog-section">
+        <div class="blog-container">
+            <h2>Post-Workout Recovery: The Power of Smoothies</h2>
+            <img src="img/noticia1.webp" alt="Post workout smoothie">
+        </div>
+    </section>
+
+    <!-- SECTION 2 -->
+    <section class="section2">
+        <div class="section2-content">
+            <p>
+                After a strenuous workout, it's crucial to nourish your body with the right nutrients for optimal recovery. 
+                Smoothies can be an excellent choice for post-workout replenishment, as they provide a convenient way to pack 
+                in essential nutrients and support muscle repair.
+            </p>
+
+            <p>Here are a few key reasons why smoothies are an effective post-workout option:</p>
+
+            <ol>
+                <li><strong>Muscle Recovery:</strong> Smoothies can be customized with ingredients like Greek yogurt, almond butter, and protein powder to provide your muscles with the necessary amino acids for repair and growth. These ingredients also help replenish glycogen stores, aiding in faster recovery.</li>
+                <li><strong>Hydration:</strong> Staying hydrated is essential during and after a workout. Smoothies made with a base of coconut water or other hydrating liquids can help replenish electrolytes lost through sweat, promoting proper hydration and preventing muscle cramps.</li>
+                <li><strong>Anti-Inflammatory Properties:</strong> Certain ingredients like turmeric, ginger, and leafy greens possess anti-inflammatory properties. Including them in your post-workout smoothies can help reduce inflammation and promote faster recovery.</li>
+                <li><strong>Nutrient Absorption:</strong> After a workout, your body is primed to absorb nutrients. Smoothies, especially those made with easily digestible ingredients like blended fruits and vegetables, are quickly assimilated, ensuring that your body receives the nutrients it needs for recovery.</li>
+            </ol>
+
+            <p class="highlight">
+                <em>Try our Spinach & Pineapple in our new 330ml bottle size – perfect for on the go, after a gym session!</em>
+            </p>
+
+            <p>
+                Remember to consume your post-workout smoothie within the ideal window of 30 to 60 minutes after exercise to maximize its benefits. 
+                Enjoy the delicious taste and feel your body recover and rejuvenate!
+            </p>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="newsletter">
+                <h2>ZUMIX</h2>
+                <p>Sign up to receive exclusive news about new flavors, special offers, and tips for living a healthy lifestyle. We promise to only send you fresh and energizing content. We respect your privacy and will never share your information with third parties.</p>
+                <form>
+                    <input class="email" type="email" placeholder="Email" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-links">
+                <h3>HELP</h3>
+                <ul>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h3>CONTACT</h3>
+                <p>alexandra@ejemplo.com</p>
+                <p>1+(555)-555-5555</p>
+                <p>© Alexandra Restrepo - 2025</p>
+            </div>
+
+            <div class="footer-logo">
+                <h3>ZUMIX</h3>
+            </div>
+        </div>
+    </footer>
+
+    <script src="carrito.js"></script>
+    <script>
+        // Detecta el scroll y agrega/clasifica clase "scrolled"
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) { 
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

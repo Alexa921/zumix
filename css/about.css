@@ -10,7 +10,7 @@ body {
 }
 
 .nav-right span {
-    color: white;
+    color: black;
     margin-top: 10px;
     margin-left: -10px;
 }
@@ -298,16 +298,16 @@ body {
     color: #555;
 }
 
-.product-card a {
+.product-card .shop-link {
     margin: 0 20px;
     font-size: 14px;
     font-weight: 500;
     color: #000;
-    text-decoration: none;
+    text-decoration: none; 
 }
 
-.product-card a:hover {
-    text-decoration: underline;
+.product-card .shop-link:hover {
+    text-decoration: none; 
 }
 
 /* SECTION 4 */

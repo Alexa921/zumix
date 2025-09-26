@@ -229,6 +229,11 @@ body {
     text-align: center; 
 }
 
+.section2 a {
+    text-decoration: none;
+    color: inherit; 
+}
+
 /* Contenedor con scroll horizontal */
 .section2-products-row {
     display: flex;
@@ -605,6 +610,12 @@ body {
 .section7 .overlay h2:hover {
     text-decoration: underline;
 }
+
+.section7 a {
+    text-decoration: none; /* Quita la raya */
+    color: inherit;        /* Hereda el color del padre (blanco en este caso) */
+}
+
 
 /* SECTION 8 */
 .section8 {

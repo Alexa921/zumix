@@ -130,7 +130,7 @@ body {
 /* HERO */
 .hero {
     position: relative; 
-    background: url('../img/fondo-shop.png') no-repeat center center/cover;
+    background: url('../img/fondo-detox.png') no-repeat center center/cover;
     height: 300px;
     display: flex;
     align-items: center;      
