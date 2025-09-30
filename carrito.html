@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - Zumix</title>
+    <link rel="stylesheet" href="css/carrito.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="/index.html"><h1 class="logo">ZUMIX</h1></a>
+        </div>
+        <ul class="nav-center">
+            <li><a href="/shop.html">Shop</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/theme.html">Theme Features</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="Instagram" class="icon"></a>
+            <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="Facebook" class="icon"></a>
+            <a href="https://twitter.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384017.png" alt="Twitter" class="icon"></a>
+            <a href="/carrito.html"><img src="https://cdn-icons-png.flaticon.com/512/1170/1170576.png" alt="Carrito" class="icon"></a>
+            <span id="contador">0</span>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO DEL CARRITO -->
+    <main class="container mt-5">
+        <h2>CART</h2>
+        <div id="lista-carrito"></div>
+
+        <div class="mt-3">
+            <h4>SUBTOTAL: <span id="subtotal">0</span></h4>
+        </div>
+    </main>
+
+     <script>
+    // Navbar scroll
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) { 
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+
+    function addToCart(name, price) {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    carrito.push({ name, price });
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+
+    // actualizar numerito en el ícono
+    document.getElementById("contador").textContent = carrito.length;
+    }
+
+
+        function formatearPesos(valor) {
+            return new Intl.NumberFormat("es-CO", {
+                style: "currency",
+                currency: "COP",
+                minimumFractionDigits: 0
+            }).format(valor);
+        }
+
+        // 🚀 Ejemplo: actualizar el subtotal
+        let subtotal = 125000; 
+        document.getElementById("subtotal").textContent = formatearPesos(subtotal);
+
+    </script>
+    <script src="carrito.js"></script>
+</body>
+</html>

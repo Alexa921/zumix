@@ -434,3 +434,219 @@ body {
     flex: none;
     color: rgb(129, 129, 129);
 }
+
+/* ================================================= */
+/* TABLET & PANTALLAS MEDIANAS (<= 1024px)  */
+/* ================================================= */
+@media (max-width: 1024px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .nav-left .logo {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .nav-center {
+        gap: 15px;
+    }
+
+    .nav-center a {
+        font-size: 18px;
+    }
+
+    /* HERO */
+    .hero {
+        height: 70vh; /* Reducir la altura del Hero */
+    }
+
+    .hero-content h2 {
+        font-size: 55px;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+    
+    #countdown {
+        font-size: 32px;
+    }
+    
+    .btn {
+        padding: 12px 40px;
+    }
+
+    /* SECTION 1 (Productos con Scroll Horizontal) */
+    .section2 h2 {
+        margin-top: 50px;
+        font-size: 30px;
+    }
+
+    .section2-products-row {
+        gap: 20px;
+        padding: 0 20px 15px 20px; /* Reducir padding horizontal */
+        /* Asegurar que el scrollbar se muestre correctamente */
+    }
+
+    .section2-product-card {
+        flex: 0 0 300px; /* Reducir el ancho de la tarjeta */
+    }
+
+    .section2-image-wrapper {
+        height: 380px; /* Reducir la altura de la imagen */
+        width: 300px; 
+    }
+    
+    /* FOOTER */
+    .footer-top h2, .footer-top p, .footer-links h3, .footer-links ul li a, .footer-logo h3 {
+        margin-left: 30px;
+    }
+    
+    .footer-top form {
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer-top button {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* ================================================= */
+/* MÓVILES (<= 600px) - MOBILE FIRST      */
+/* ================================================= */
+@media (max-width: 600px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-left .logo {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    .nav-center {
+        display: none; /* Oculta el menú central */
+    }
+    
+    .nav-right span {
+        display: none; /* Oculta el texto de usuario */
+    }
+    
+    /* HERO */
+    .hero {
+        height: 80vh; /* Aumentar ligeramente la altura en móvil para darle impacto */
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+        line-height: 1.1;
+        margin: 0 0 15px 0;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        margin: 5px 0 20px 0;
+    }
+    
+    #countdown {
+        font-size: 24px;
+        margin: 15px 0;
+    }
+    
+    .btn {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+    
+    /* SECTION 1 (Productos con Scroll Horizontal) */
+    .section2 h2 {
+        margin-top: 30px;
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .section2-products-row {
+        gap: 15px;
+        padding: 0 15px 10px 15px; /* Reducir padding aún más */
+        /* Mejorar la experiencia táctil */
+        -webkit-overflow-scrolling: touch; 
+    }
+
+    .section2-product-card {
+        flex: 0 0 260px; /* Reducir el ancho de la tarjeta */
+    }
+
+    .section2-image-wrapper {
+        height: 340px; 
+        width: 260px;
+    }
+    
+    .section2-product-info h3 {
+        font-size: 18px;
+    }
+    
+    /* Ocultar scrollbar completamente en móvil si es necesario, aunque es mejor dejarlo en la parte inferior */
+    .section2-products-row::-webkit-scrollbar {
+        height: 10px; 
+        min-height: 10px;
+    }
+    
+    .section2-products-row::-webkit-scrollbar-thumb {
+        border: 3px solid #f0f0f0; 
+    }
+    
+    .section-divider {
+        margin: 50px auto;
+        width: 80%;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-top h2 {
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+    .footer-top p {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-top form {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+    
+    .footer-top input[type="email"], .footer-top button {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-links h3 {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    
+    .footer-links ul li a, .footer-links p {
+        margin-left: 20px;
+    }
+}

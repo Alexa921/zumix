@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    color: white;
+}
+
+.nav-right span {
+    color: black;
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+/* NAVBAR */
+.navbar {
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 10;
+    transition: background 0.3s ease, padding 0.3s ease;
+    background: white; 
+    color: black;
+}
+
+.navbar.scrolled {
+    position: fixed;     
+    background: white;  
+    padding: 10px 50px;  
+    top: 0;
+    left: 0;
+    color: black;
+}
+
+.navbar.scrolled .nav-center a,
+.navbar.scrolled .nav-right a,
+.navbar.scrolled .nav-right span {
+    color: black;
+}
+
+.navbar.scrolled .nav-left .logo {
+    color: black;
+}
+
+.navbar.scrolled .icon {
+    filter: none;
+    filter: brightness(0) invert(0);
+}
+
+.nav-left .logo {
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.nav-center {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-top: 10px;
+}
+
+.nav-center li {
+    position: relative;
+}
+
+.nav-center a {
+    text-decoration: none;
+    color: black;
+    font-size: 22px;
+    transition: color 0.3s ease;
+    padding: 5px;
+}
+
+/* Dropdown oculto */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background: black;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 160px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    font-size: 16px;
+    transition: background 0.3s ease;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    margin-top: -15px;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    filter: brightness(0) invert(0); 
+}
+
+.nav-left a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+/* HERO */
+.hero {
+    margin-top: 0;  
+    padding-top: 0; 
+}
+
+.hero-content h2 {
+    margin-top: 0;  
+}
+
+.btn {
+    background: #92a692;
+    color: white;
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: lighter;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.btn:hover {
+    background: #869786;
+    color: #ffffff;
+}
+
+/* CARRITO */
+.carrito {
+    color: rgb(0, 0, 0);
+    padding: 40px 10%;
+    min-height: 100vh;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    width: 100%;
+    background: #f3f3f3;
+    padding: 30px;
+    margin-top: 100px; 
+    margin-bottom: 100px;
+    margin-left: auto; 
+    margin-right: auto;
+    color: black;
+}
+
+.container h2 {
+    font-size: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.mt-3 {
+    font-size: 30px;
+    color: #333;
+    margin-top: 40px;
+}
+
+.producto-carrito {
+    display: grid;
+    grid-template-columns: 100px 220px 80px 100px auto;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+}
+
+.producto-carrito img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.producto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.producto-info h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.producto-info p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.producto-precio {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-right: 15px;
+    margin: 0;
+}
+
+.cantidad-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.cantidad-box button {
+    background: none;
+    border: none;
+    padding: 6px 10px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cantidad-box input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+    background: #f3f3f3;
+}
+
+.eliminar {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #666;
+    transition: color 0.2s;
+}
+
+.eliminar:hover {
+    color: rgb(255, 6, 6);
+}
+
+.subtotal-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-checkout {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #222;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-checkout:hover {
+    background: #000;
+}

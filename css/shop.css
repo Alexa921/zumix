@@ -432,3 +432,236 @@ body {
     flex: none;
     color: rgb(129, 129, 129);
 }
+
+/* ================================================= */
+/* TABLET & PANTALLAS MEDIANAS (<= 1024px)  */
+/* ================================================= */
+@media (max-width: 1024px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .nav-left .logo {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .nav-center {
+        gap: 15px;
+    }
+
+    .nav-center a {
+        font-size: 18px;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 0 30px;
+        height: 250px; /* Reducir un poco la altura */
+    }
+
+    .hero-content h2 {
+        font-size: 50px;
+        margin-left: 30px;
+    }
+
+    /* SECTION 1 - SHOP GRID */
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr); /* 3 columnas -> 2 columnas */
+        gap: 50px 20px;
+    }
+
+    .product-card img {
+        height: 480px; /* Reducir un poco la altura de la imagen */
+        width: 90%;
+    }
+
+    .badge {
+        left: 30px; /* Ajustar posición del badge */
+    }
+
+    /* SECTION 2 - PROMO BANNERS */
+    .shop-section2 {
+        padding: 40px 20px;
+    }
+
+    .promo-banners {
+        width: 100%;
+        max-width: 95%;
+        margin-left: 0;
+    }
+
+    .banner-text {
+        top: 80px;
+        left: 20px;
+        font-size: 20px;
+    }
+    
+    .collection-btn {
+        font-size: 16px;
+    }
+
+    /* FOOTER */
+    .footer-top h2, .footer-top p, .footer-links h3, .footer-links ul li a {
+        margin-left: 30px;
+    }
+
+    .footer-top form {
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer-top button {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-logo h3 {
+        margin-right: 0;
+        margin-left: 30px;
+        margin-top: 20px;
+    }
+}
+
+
+/* ================================================= */
+/* MÓVILES (<= 600px) - MOBILE FIRST      */
+/* ================================================= */
+@media (max-width: 600px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-left .logo {
+        font-size: 28px;
+    }
+
+    .nav-center {
+        display: none; /* Oculta el menú central */
+    }
+    
+    .nav-right {
+        gap: 10px;
+    }
+
+    .nav-right span {
+        display: none; /* Oculta el texto de usuario para ahorrar espacio */
+    }
+
+    /* HERO */
+    .hero {
+        padding: 0 20px;
+        height: 200px;
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center; /* Centra el contenido */
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+        margin-left: 0;
+        margin-top: 0; /* Asegura que el título quede centrado verticalmente */
+    }
+
+    /* SECTION 1 - SHOP GRID */
+    .products-grid {
+        grid-template-columns: 1fr; /* 2 columnas -> 1 columna */
+        gap: 50px 0;
+    }
+
+    .product-card img {
+        height: auto; /* Dejar que la imagen determine su altura */
+        max-height: 400px;
+        width: 100%; /* Imagen a ancho completo */
+        margin-bottom: 10px;
+    }
+    
+    .product-card {
+        padding: 0 15px; /* Padding para que no se pegue a los bordes */
+    }
+
+    .badge {
+        left: 15px; /* Ajustar posición del badge */
+        top: 10px;
+        font-size: 14px;
+    }
+    
+    .btn {
+        margin-top: 5px;
+    }
+
+    /* SECTION 2 - PROMO BANNERS */
+    .promo-banners {
+        grid-template-columns: 1fr; /* 2 columnas -> 1 columna (Apilamiento) */
+        gap: 20px;
+    }
+
+    .banner-text {
+        top: 60px;
+        left: 15px;
+        font-size: 18px;
+    }
+
+    .collections h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .collection-buttons {
+        gap: 8px;
+    }
+
+    .collection-btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-top h2 {
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+    .footer-top p {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-top form {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+    
+    .footer-top input[type="email"], .footer-top button {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-links h3 {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    
+    .footer-links ul li a, .footer-links p {
+        margin-left: 20px;
+    }
+}

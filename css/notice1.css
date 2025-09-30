@@ -310,3 +310,173 @@ body {
     flex: none;
     color: rgb(129, 129, 129);
 }
+
+
+/* ================================================= */
+/* TABLET & PANTALLAS MEDIANAS (<= 1024px)  */
+/* ================================================= */
+@media (max-width: 1024px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .nav-left .logo {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .nav-center {
+        gap: 15px;
+    }
+
+    .nav-center a {
+        font-size: 18px;
+    }
+
+    /* HERO & BOTÓN (Generalmente, innecesario en páginas de blog, pero ajustamos el estilo genérico .btn) */
+    .btn {
+        margin-left: 30px;
+        padding: 12px 40px;
+    }
+
+    /* SECTION 1 (Título y Banner principal) */
+    .blog-section {
+        padding: 40px 15px;
+    }
+
+    .blog-container h2 {
+        font-size: 30px;
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+    
+    /* SECTION 2 (Contenido del Blog) */
+    .section2 {
+        max-width: 100%; /* Permitir que ocupe todo el ancho disponible */
+        margin: 50px auto; 
+        padding: 0 30px;
+        font-size: 17px;
+    }
+    
+    .section2 ol {
+        margin: 20px 0 30px 0;
+        padding-left: 20px;
+    }
+    
+    /* FOOTER */
+    .footer-top h2, .footer-top p, .footer-links h3, .footer-links ul li a, .footer-logo h3 {
+        margin-left: 30px;
+    }
+    
+    .footer-top form {
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer-top button {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* ================================================= */
+/* MÓVILES (<= 600px) - MOBILE FIRST      */
+/* ================================================= */
+@media (max-width: 600px) {
+    /* NAVBAR (Ocultar menú y ajustar logo) */
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-left .logo {
+        font-size: 28px;
+        margin-left: 0;
+    }
+
+    .nav-center {
+        display: none; /* Oculta el menú central */
+    }
+    
+    .nav-right span {
+        display: none; /* Oculta el texto de usuario */
+    }
+
+    /* SECTION 1 (Título y Banner principal) */
+    .blog-container h2 {
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+
+    /* SECTION 2 (Contenido del Blog) */
+    .section2 {
+        margin: 30px auto;
+        padding: 0 15px;
+        font-size: 16px; /* Reducir el tamaño de la fuente para mejor lectura */
+        line-height: 1.6; /* Reducir la altura de línea ligeramente */
+    }
+    
+    .section2 p {
+        margin-bottom: 15px;
+    }
+
+    .section2 .highlight {
+        font-size: 15px;
+        margin: 20px 0;
+    }
+    
+    .section2 ol {
+        margin: 15px 0 25px 0;
+        padding-left: 20px;
+    }
+    
+    .section2 ol li {
+        margin-bottom: 10px;
+    }
+    
+    /* FOOTER */
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-top h2 {
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+    .footer-top p {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-top form {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+    
+    .footer-top input[type="email"], .footer-top button {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-links h3 {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    
+    .footer-links ul li a, .footer-links p {
+        margin-left: 20px;
+    }
+}

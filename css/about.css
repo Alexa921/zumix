@@ -467,3 +467,224 @@ body {
     flex: none;
     color: rgb(129, 129, 129);
 }
+
+
+/* ================================================= */
+/* TABLET & PANTALLAS MEDIANAS (<= 1024px)  */
+/* ================================================= */
+@media (max-width: 1024px) {
+    /* NAVBAR */
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .nav-left .logo {
+        font-size: 32px;
+        margin-left: 0;
+    }
+
+    .nav-center {
+        gap: 15px;
+    }
+
+    .nav-center a {
+        font-size: 18px;
+    }
+
+    /* HERO */
+    .hero {
+        padding: 0 30px;
+        height: 80vh; /* Reducir ligeramente la altura en tablet */
+    }
+
+    .hero-content h2 {
+        font-size: 55px;
+        margin-left: 30px;
+    }
+    
+    .btn {
+        margin-left: 30px;
+        padding: 12px 40px;
+    }
+
+    /* SECTION 2 (Equipo) */
+    .team-container {
+        grid-template-columns: repeat(2, 1fr); /* 4 columnas -> 2 columnas */
+        gap: 30px;
+    }
+
+    /* SECTION 3 (Productos/Testimonios) */
+    .products-container {
+        grid-template-columns: repeat(2, 1fr); /* 4 columnas -> 2 columnas */
+        gap: 25px;
+    }
+
+    /* SECTION 4 (Mapa) */
+    .section11 {
+        height: 400px;
+        margin-top: 50px;
+    }
+    
+    /* El mapa y la información de recogida necesitan ser ajustados */
+    .pickup-info {
+        right: 5%; /* Ajustar la posición lateral */
+        padding: 20px;
+        max-width: 280px;
+    }
+
+    /* FOOTER (Ajustes de espaciado) */
+    .footer-top h2, .footer-top p, .footer-links h3, .footer-links ul li a, .footer-logo h3 {
+        margin-left: 30px;
+    }
+    
+    .footer-top form {
+        justify-content: flex-start;
+        margin-top: 30px;
+    }
+
+    .footer-top button {
+        margin-right: 0;
+        margin-left: 30px;
+    }
+
+    .footer-bottom {
+        padding-top: 20px;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+/* ================================================= */
+/* MÓVILES (<= 600px) - MOBILE FIRST      */
+/* ================================================= */
+@media (max-width: 600px) {
+    /* NAVBAR (Ocultar menú y ajustar logo) */
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-left .logo {
+        font-size: 28px;
+    }
+
+    .nav-center {
+        display: none; /* Oculta el menú central, requiere menú hamburguesa */
+    }
+    
+    .nav-right {
+        gap: 10px;
+    }
+
+    .nav-right span {
+        display: none; /* Oculta el texto de usuario para ahorrar espacio */
+    }
+
+    /* HERO */
+    .hero {
+        padding: 0 20px;
+        height: 70vh; /* Altura más manejable */
+        text-align: center;
+    }
+
+    .hero-content {
+        align-items: center; /* Centra el contenido */
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+        margin-left: 0;
+        margin-top: 50px;
+    }
+
+    .btn {
+        margin-left: 0;
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    /* SECTION 1 (Párrafo de Introducción) */
+    .section1 p {
+        font-size: 18px;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    /* SECTION 2 (Equipo) */
+    .section2 {
+        padding: 40px 15px;
+    }
+    
+    .team-container {
+        grid-template-columns: 1fr; /* 2 columnas -> 1 columna (Apilamiento) */
+        gap: 30px;
+    }
+    
+    /* SECTION 3 (Productos/Testimonios) */
+    .section3 {
+        padding: 40px 15px;
+    }
+    
+    .section3-header h2 {
+        font-size: 30px;
+    }
+
+    .products-container {
+        grid-template-columns: 1fr; /* 2 columnas -> 1 columna (Apilamiento) */
+        gap: 20px;
+    }
+
+    /* SECTION 4 (Mapa y Ubicación) */
+    .section11 {
+        height: 350px;
+        margin-top: 50px;
+    }
+    
+    .pickup-info {
+        position: static; /* Ya no es absoluto */
+        transform: none;
+        width: 90%;
+        max-width: none;
+        margin: 20px auto;
+        box-shadow: none; /* Eliminar sombra en móvil para un diseño más limpio */
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-top h2 {
+        font-size: 50px;
+        margin-left: 20px;
+    }
+
+    .footer-top p {
+        font-size: 16px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .footer-top form {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 0 20px;
+    }
+    
+    .footer-top input[type="email"], .footer-top button {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-links h3 {
+        font-size: 30px;
+        margin-left: 20px;
+    }
+    
+    .footer-links ul li a, .footer-links p {
+        margin-left: 20px;
+    }
+}

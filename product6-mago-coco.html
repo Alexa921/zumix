@@ -188,7 +188,7 @@
             </div>
         </div>
     </footer>
-
+    <script src="carrito.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
         const mainImage = document.querySelector(".section-product .main-image");
@@ -216,6 +216,36 @@
             qtyInput.value = value + 1;
         });
         });
+
+         // carrito
+        document.addEventListener("DOMContentLoaded", () => {
+
+        // ... (Tu código anterior EXISTENTE para thumbnails y cantidad) ...
+
+        // BOTÓN ADD TO CART
+        const addBtn = document.querySelector(".add-cart");
+
+        addBtn.addEventListener("click", () => {
+            const nombre = document.querySelector(".product-info h2").textContent;
+            const priceElement = document.querySelector(".price") || document.querySelector(".old-price");
+            const precio = parseFloat(priceElement.textContent.replace('$', '')) || 0;
+            const imagen = document.querySelector(".main-image").src;
+            const cantidad = parseInt(document.querySelector(".quantity input").value);
+
+            const tamano = document.querySelector(".sizes .active")?.textContent || "";
+
+            const producto = {
+                nombre: nombre,
+                precio: precio,
+                imagen: imagen,
+                cantidad: cantidad,
+                tamano: tamano
+            };
+
+            agregarAlCarrito(producto);
+        });
+    });
+
 
     </script>
 </body>
